@@ -1,10 +1,11 @@
 services:
   - type: web
     name: inova-tech-api
-    env: python
-    buildCommand: ""
-    startCommand: python app.py
-    plan: free
+    env: docker
+    repo: https://github.com/Guibellemo/Desafio-Final-Devops.git
     region: oregon
+    plan: free
     branch: main
     autoDeploy: true
+    dockerfilePath: ./dockerfile
+    dockerContext: ./
